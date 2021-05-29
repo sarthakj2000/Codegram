@@ -1,3 +1,7 @@
 module.exports.home=function(req,res){
-   return res.end('<h1>Codegram is up</h1>');
+   console.log(req.cookies);
+   res.cookie('username','somet')
+   return res.render('home',{
+      title:"Home",
+   })
 }
